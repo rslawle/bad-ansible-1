@@ -30,9 +30,14 @@
         name: "{{ three_tier_packages }}"
         state: absent
 
+    - name: Remove tomcat directory
+      file:
+        path: /usr/share/tomcat/webapps/ROOT/
+        state: absent
+
     - name: Remove index.html
       file:
-        path: /tmp/index.html
+        path: /usr/share/tomcat/webapps/ansible/index.html
         state: absent
 
     - name: Remove postgresql dir
