@@ -1,5 +1,5 @@
 ---
-- name: start tomcat
+- name: enable and start tomcat
   service:
     name: tomcat
     state: started
