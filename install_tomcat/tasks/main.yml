@@ -15,6 +15,6 @@
     dest: "{{ ansible_tomcat_dir }}/index.html"
     owner: root
     group: ec2-user
-    mode: 0644
+    mode: 0755
   notify: enable and start tomcat
 ...
