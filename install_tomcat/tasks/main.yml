@@ -13,6 +13,8 @@
   template:
     src: index.html.j2
     dest: "{{ ansible_tomcat_dir }}/index.html"
+    owner: root
+    group: ec2-user
     mode: 0644
   notify: enable and start tomcat
 ...
